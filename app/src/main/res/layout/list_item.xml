@@ -4,20 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="10dp"
-    android:background="?android:attr/selectableItemBackground"
+    android:layout_margin="5dp"
+    android:background="@color/blue_gray_100"
     android:clickable="true"
+    android:focusable="true"
     android:orientation="horizontal"
-    app:strokeColor="#75a478"
-    app:strokeWidth="1dp"
     app:cardCornerRadius="10dp"
     app:cardElevation="@dimen/cardview_compat_inset_shadow"
-    android:focusable="true">
+    app:strokeColor="#75a478"
+    app:strokeWidth="1dp">
+    <View
+        android:id="@+id/viewColorTag"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginStart="5dp"
+        android:background="@color/blue_gray_100"
+        android:paddingBottom="5dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/blue_gray_100">
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:background="?android:attr/selectableItemBackground">
 
         <TextView
             android:id="@+id/tvTitle"
@@ -66,18 +78,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/tvDescription"
-            android:layout_marginTop="10dp"
             android:layout_marginStart="10dp"
-            app:tint="@color/dim_gray"
-            android:src="@drawable/ic_date_range_black_24dp" />
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_date_range_black_24dp"
+            app:tint="@color/dim_gray" />
 
         <TextView
             android:id="@+id/txtDueDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/tvDescription"
-            android:layout_toEndOf="@+id/imgDate"
             android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/imgDate"
             android:text="Due Date:"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
             android:textColor="#212121"
@@ -88,9 +100,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/txtDueDate"
-            android:textColor="@color/black"
             android:layout_marginStart="15dp"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+            android:textColor="@color/black"
             tools:text="07/02/2020" />
 
         <ImageView
@@ -100,17 +112,17 @@
             android:layout_below="@+id/tvDescription"
             android:layout_alignParentEnd="true"
             android:layout_marginTop="10dp"
-            app:tint="@color/dim_gray"
             android:layout_marginEnd="10dp"
-            android:src="@drawable/ic_access_time_black_24dp" />
+            android:src="@drawable/ic_access_time_black_24dp"
+            app:tint="@color/dim_gray" />
 
         <TextView
             android:id="@+id/txtDueTime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/tvDescription"
-            android:layout_toStartOf="@+id/imgTime"
             android:layout_marginTop="10dp"
+            android:layout_toStartOf="@+id/imgTime"
             android:text=":Due at"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
             android:textColor="#212121"
@@ -122,9 +134,9 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/txtDueDate"
             android:layout_alignParentEnd="true"
-            android:textColor="@color/black"
             android:layout_marginEnd="15dp"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+            android:textColor="@color/black"
             tools:text="9:00 pm" />
 
 
@@ -138,12 +150,13 @@
             android:layout_gravity="center"
             android:backgroundTint="@color/blue_gray_100"
             android:text="DELETE"
-            app:strokeColor="#75a478"
-            app:cornerRadius="8dp"
-            app:strokeWidth="1dp"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
             android:textColor="#12005e"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            app:cornerRadius="8dp"
+            app:strokeColor="#75a478"
+            app:strokeWidth="1dp" />
+    </RelativeLayout>
     </RelativeLayout>
 
 </com.google.android.material.card.MaterialCardView>
